@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dmce7rqefdcpy"]
+
+[ext_resource type="Texture2D" path="res://assets/Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/UI Elements/UI Elements/Wood Table/WoodTable.png" id="1_table"]
+
+[node name="WoodTable" type="Node2D" unique_id=1696712399]
+metadata/asset_kind = "ui_wood_table"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=180349612]
+texture_filter = 1
+texture = ExtResource("1_table")

@@ -1,0 +1,61 @@
+[gd_scene load_steps=12 format=3 uid="uid://cgau1jyrnsyqh"]
+
+[ext_resource type="Script" uid="uid://dglo38aukasbu" path="res://scripts/main.gd" id="1_main"]
+[ext_resource type="PackedScene" path="res://scenes/assets/terrain.tscn" id="2_terrain"]
+[ext_resource type="PackedScene" path="res://scenes/assets/worker.tscn" id="3_worker"]
+[ext_resource type="PackedScene" path="res://scenes/assets/hall.tscn" id="4_hall"]
+[ext_resource type="PackedScene" path="res://scenes/assets/gold.tscn" id="5_gold"]
+[ext_resource type="PackedScene" path="res://scenes/assets/tree.tscn" id="6_tree"]
+[ext_resource type="PackedScene" path="res://scenes/ui_interface.tscn" id="7_interface"]
+[ext_resource type="Script" path="res://scripts/forest_renderer.gd" id="8_forest"]
+
+[node name="Main" type="Node2D" unique_id=854377413]
+script = ExtResource("1_main")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(9600, 9600)
+position_smoothing_enabled = false
+
+[node name="Terrain" parent="." instance=ExtResource("2_terrain")]
+
+[node name="ForestRenderer" type="Node2D" parent="."]
+script = ExtResource("8_forest")
+
+[node name="PlayerHall" parent="." instance=ExtResource("4_hall")]
+position = Vector2(9400, 9600)
+kind = "hall"
+team = "Blue"
+
+[node name="Worker1" parent="." instance=ExtResource("3_worker")]
+position = Vector2(9580, 9720)
+kind = "worker"
+team = "Blue"
+
+[node name="Worker2" parent="." instance=ExtResource("3_worker")]
+position = Vector2(9650, 9720)
+kind = "worker"
+team = "Blue"
+
+[node name="Worker3" parent="." instance=ExtResource("3_worker")]
+position = Vector2(9720, 9720)
+kind = "worker"
+team = "Blue"
+
+[node name="GoldMine1" parent="." instance=ExtResource("5_gold")]
+position = Vector2(10050, 9280)
+kind = "gold"
+amount = 1000
+
+[node name="Tree1" parent="." instance=ExtResource("6_tree")]
+position = Vector2(10150, 9790)
+kind = "wood"
+
+[node name="Tree2" parent="." instance=ExtResource("6_tree")]
+position = Vector2(10350, 9850)
+kind = "wood"
+
+[node name="Tree3" parent="." instance=ExtResource("6_tree")]
+position = Vector2(10280, 10050)
+kind = "wood"
+
+[node name="UIInterface" parent="." instance=ExtResource("7_interface")]

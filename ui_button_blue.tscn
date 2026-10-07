@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c5uq10dl55y7k"]
+
+[ext_resource type="Texture2D" uid="uid://bn3xt8rdmoai3" path="res://assets/Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/UI Elements/UI Elements/Buttons/BigBlueButton_Regular.png" id="1"]
+
+[node name="ButtonBlue" type="Sprite2D" unique_id=324002556]
+position = Vector2(222, 50)
+texture = ExtResource("1")
+metadata/asset_kind = "ui_button_blue"

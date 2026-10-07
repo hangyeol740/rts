@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://by2w4mvuy3jsg"]
+
+[ext_resource type="Texture2D" uid="uid://benn2pu1x6rs3" path="res://assets/Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/UI Elements/UI Elements/Wood Table/WoodTable_Slots.png" id="1_slots"]
+
+[node name="SlotTile" type="Sprite2D" unique_id=2072827374]
+texture_filter = 1
+texture = ExtResource("1_slots")
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 64)
+metadata/asset_kind = "ui_slot_tile"

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/UI Elements/UI Elements/Banners/Banner_Slots.png" id="1_slots"]
+
+[node name="BannerSlots" type="Sprite2D"]
+metadata/asset_kind = "ui_banner_slots"
+texture = ExtResource("1_slots")

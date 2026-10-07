@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/UI Elements/UI Elements/Bars/BigBar_Base.png" id="1_base"]
+[ext_resource type="Texture2D" path="res://assets/Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/UI Elements/UI Elements/Bars/BigBar_Fill.png" id="2_fill"]
+[node name="HealthBar" type="Node2D"]
+metadata/asset_kind = "ui_health_bar"
+[node name="Base" type="Sprite2D" parent="."]
+texture = ExtResource("1_base")
+[node name="Fill" type="Sprite2D" parent="."]
+texture = ExtResource("2_fill")
+position = Vector2(-100, 0)
+scale = Vector2(3, 0.45)

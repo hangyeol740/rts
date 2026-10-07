@@ -1,0 +1,94 @@
+[gd_scene load_steps=21 format=3 uid="uid://b5otbuakfoaaa"]
+
+[ext_resource type="Texture2D" uid="uid://d3tuwul2vga7m" path="res://assets/Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Units/Blue Units/Pawn/Pawn_Idle Pickaxe.png" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/assets/health_bar.tscn" id="2_health_bar"]
+[ext_resource type="Texture2D" path="res://assets/Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Units/Blue Units/Pawn/Pawn_Run Pickaxe.png" id="3_run"]
+[ext_resource type="Texture2D" path="res://assets/Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Units/Blue Units/Pawn/Pawn_Interact Pickaxe.png" id="4_gold_gather"]
+[ext_resource type="Texture2D" path="res://assets/Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Units/Blue Units/Pawn/Pawn_Interact Axe.png" id="5_wood_gather"]
+[ext_resource type="Texture2D" path="res://assets/Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Units/Blue Units/Pawn/Pawn_Interact Knife.png" id="6_food_gather"]
+[ext_resource type="Texture2D" path="res://assets/Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Units/Blue Units/Pawn/Pawn_Run Gold.png" id="7_gold_carry"]
+[ext_resource type="Texture2D" path="res://assets/Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Units/Blue Units/Pawn/Pawn_Run Wood.png" id="8_wood_carry"]
+[ext_resource type="Texture2D" path="res://assets/Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Units/Blue Units/Pawn/Pawn_Run Meat.png" id="9_food_carry"]
+
+[sub_resource type="CircleShape2D" id="1_body"]
+radius = 20.0
+
+[sub_resource type="AtlasTexture" id="idle_0"]
+atlas = ExtResource("1")
+region = Rect2(0, 0, 192, 192)
+[sub_resource type="AtlasTexture" id="idle_1"]
+atlas = ExtResource("1")
+region = Rect2(192, 0, 192, 192)
+[sub_resource type="AtlasTexture" id="run_0"]
+atlas = ExtResource("3_run")
+region = Rect2(0, 0, 192, 192)
+[sub_resource type="AtlasTexture" id="run_1"]
+atlas = ExtResource("3_run")
+region = Rect2(192, 0, 192, 192)
+[sub_resource type="AtlasTexture" id="gold_0"]
+atlas = ExtResource("4_gold_gather")
+region = Rect2(0, 0, 192, 192)
+[sub_resource type="AtlasTexture" id="gold_1"]
+atlas = ExtResource("4_gold_gather")
+region = Rect2(192, 0, 192, 192)
+[sub_resource type="AtlasTexture" id="wood_0"]
+atlas = ExtResource("5_wood_gather")
+region = Rect2(0, 0, 192, 192)
+[sub_resource type="AtlasTexture" id="wood_1"]
+atlas = ExtResource("5_wood_gather")
+region = Rect2(192, 0, 192, 192)
+[sub_resource type="AtlasTexture" id="food_0"]
+atlas = ExtResource("6_food_gather")
+region = Rect2(0, 0, 192, 192)
+[sub_resource type="AtlasTexture" id="food_1"]
+atlas = ExtResource("6_food_gather")
+region = Rect2(192, 0, 192, 192)
+[sub_resource type="AtlasTexture" id="carry_gold_0"]
+atlas = ExtResource("7_gold_carry")
+region = Rect2(0, 0, 192, 192)
+[sub_resource type="AtlasTexture" id="carry_gold_1"]
+atlas = ExtResource("7_gold_carry")
+region = Rect2(192, 0, 192, 192)
+[sub_resource type="AtlasTexture" id="carry_wood_0"]
+atlas = ExtResource("8_wood_carry")
+region = Rect2(0, 0, 192, 192)
+[sub_resource type="AtlasTexture" id="carry_wood_1"]
+atlas = ExtResource("8_wood_carry")
+region = Rect2(192, 0, 192, 192)
+[sub_resource type="AtlasTexture" id="carry_food_0"]
+atlas = ExtResource("9_food_carry")
+region = Rect2(0, 0, 192, 192)
+[sub_resource type="AtlasTexture" id="carry_food_1"]
+atlas = ExtResource("9_food_carry")
+region = Rect2(192, 0, 192, 192)
+[sub_resource type="SpriteFrames" id="frames"]
+animations = [{"frames":[{"duration":1.0,"texture":SubResource("idle_0")},{"duration":1.0,"texture":SubResource("idle_1")}],"loop":true,"name":&"idle","speed":5.0},{"frames":[{"duration":1.0,"texture":SubResource("run_0")},{"duration":1.0,"texture":SubResource("run_1")}],"loop":true,"name":&"walk","speed":10.0},{"frames":[{"duration":1.0,"texture":SubResource("gold_0")},{"duration":1.0,"texture":SubResource("gold_1")}],"loop":true,"name":&"gather_gold","speed":8.0},{"frames":[{"duration":1.0,"texture":SubResource("wood_0")},{"duration":1.0,"texture":SubResource("wood_1")}],"loop":true,"name":&"gather_wood","speed":8.0},{"frames":[{"duration":1.0,"texture":SubResource("food_0")},{"duration":1.0,"texture":SubResource("food_1")}],"loop":true,"name":&"gather_food","speed":8.0},{"frames":[{"duration":1.0,"texture":SubResource("carry_gold_0")},{"duration":1.0,"texture":SubResource("carry_gold_1")}],"loop":true,"name":&"carry_gold","speed":10.0},{"frames":[{"duration":1.0,"texture":SubResource("carry_wood_0")},{"duration":1.0,"texture":SubResource("carry_wood_1")}],"loop":true,"name":&"carry_wood","speed":10.0},{"frames":[{"duration":1.0,"texture":SubResource("carry_food_0")},{"duration":1.0,"texture":SubResource("carry_food_1")}],"loop":true,"name":&"carry_food","speed":10.0}]
+
+[node name="Worker" type="CharacterBody2D" unique_id=1893308006]
+metadata/asset_kind = "worker"
+metadata/team = "Blue"
+collision_layer = 1
+collision_mask = 2
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=120903101]
+visible = false
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 192)
+
+[node name="Animation" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("frames")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=942331229]
+shape = SubResource("1_body")
+
+[node name="CarryIcon" type="Sprite2D" parent="."]
+position = Vector2(0, -54)
+visible = false
+
+[node name="HealthBar" parent="." instance=ExtResource("2_health_bar")]
+visible = false
