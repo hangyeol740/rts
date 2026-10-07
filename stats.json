@@ -1,0 +1,12 @@
+{
+  "start": { "gold": 150, "wood": 50, "food": 200, "population_limit": 8 },
+  "worker": { "name": "Worker", "gold": 0, "wood": 0, "food": 20, "health": 30, "attack": 3, "range": 22, "speed": 120, "time": 0 },
+  "sword": { "name": "Swordsman", "gold": 35, "wood": 0, "food": 40, "health": 60, "attack": 8, "range": 22, "speed": 110, "time": 0 },
+  "archer": { "name": "Archer", "gold": 30, "wood": 15, "food": 35, "health": 35, "attack": 6, "range": 80, "speed": 120, "time": 0 },
+  "hall": { "name": "Town Hall", "gold": 0, "wood": 0, "health": 800, "population": 8 },
+  "barracks": { "name": "Barracks", "gold": 60, "wood": 25, "health": 400 },
+  "house": { "name": "House", "gold": 0, "wood": 15, "health": 150, "population": 6 },
+  "archery": { "name": "Archery Range", "gold": 50, "wood": 30, "health": 350 },
+  "tower": { "name": "Tower", "gold": 40, "wood": 25, "health": 300, "attack": 8, "range": 260, "cooldown": 1.0 },
+  "sheep": { "name": "Sheep", "food": 80, "health": 24 }
+}
